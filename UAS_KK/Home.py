@@ -8,7 +8,7 @@ st.set_page_config(
 
 st.title("Selamat Datang di Diabetes Mellitus Diagnosis System")
 
-st.image("logo.jpeg", width=500)
+st.image("UAS_KK/logo.jpeg", width=500)
 st.write("---")
 
 st.subheader("Apa itu Dibetes Mellitus ?")

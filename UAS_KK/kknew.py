@@ -6,7 +6,7 @@ import pickle
 st.set_page_config(page_title='Diagnosa Diabetes Mellitus', layout='wide')
 
 def run():
-    @st.cache_data
+    @st.cache_(allow_output_mutation=True)
     def load_data():
         data = pd.read_csv('pages/datastreamlit.csv')
         return data
@@ -22,9 +22,9 @@ def run():
     y = data['Penyakit']
 
     # Load the trained model
-    @st.cache_resource
+    @st.cache_resource(allow_output_mutation=True)
     def load_model():
-        with open('pages/DT.pkl', 'rb') as file:
+        with open('DT.pkl', 'rb') as file:
             model = pickle.load(file)
         return model
 

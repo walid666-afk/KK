@@ -8,7 +8,7 @@ st.set_page_config(page_title='Diagnosa Diabetes Mellitus', layout='wide')
 def run():
     @st.cache_data
     def load_data():
-        data = pd.read_csv('pages/datastreamlit.csv')
+        data = pd.read_csv('UAS_KK/pages/datastreamlit.csv')
         return data
 
     # Title
@@ -24,7 +24,7 @@ def run():
     # Load the trained model
     @st.cache_resource
     def load_model():
-        with open('pages/DT.pkl', 'rb') as file:
+        with open('UAS_KK/pages/DT.pkl', 'rb') as file:
             model = pickle.load(file)
         return model
 
